@@ -3,25 +3,84 @@
     <head>
         <title> Kalkulator </title>
         <style>
+            .grid-container {
+                display:grid;
+                grid-template-columns: 50px 50px 50px 50px;
+                grid-gap: 5px;
+            }
+            input{
+                grid-column: 1 / span 4;
+            }
+            .red{
+                grid-column: 1 / span 2;
+            }
             button{
-                width:100%
+                width: 100%;
+                border: none;
+                border-radius: 4px;
+            }
+        </style>
+        <style>
+            button{
+                width:100%;
+                border: none;
+                border-radius: 4px;
+
+            }
+            .red{
+                background-color: red;
+                color:white;
+            }
+            .blue{
+                background-color: blue;
+                color: white;
+            }
+            .orange{
+                background-color: orange;
+                color: white;
+            }
+            .green{
+                background-color: green;
+                color: white;
             }
         </style>
     </head>
     <body>
+        <div class="grid-container">
+            <input type="text" nama="display">
+            <button class="red">AC</button>
+            <button>C</button>
+            <button>*</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>/</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>+</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>-</button>
+            <button>+-</button>
+            <button>0</button>
+            <button>.</button>
+            <button>=</button>
+        </div>
         <table>
             <tr>
                 <th colspan="4"><input type="text" name="display"></th>
             </tr>
             <tr>
                 <td colspan="2">
-                    <button>AC</button>
+                    <button class="red">AC</button>
                 </td>
                 <td>
-                    <button>C</button>
+                    <button class="blue">C</button>
                 </td>
                 <td>
-                    <button>*</button>
+                    <button class="orange">*</button>
                 </td>
             </tr>
             <tr>
@@ -35,7 +94,7 @@
                     <button>9</button>
                 </td>
                 <td>
-                    <button>/</button>
+                    <button class="orange">/</button>
                 </td>
             </tr>
             <tr>
@@ -49,7 +108,7 @@
                     <button>6</button>
                 </td>
                 <td>
-                    <button>-</button>
+                    <button class="orange">-</button>
                 </td>
             </tr>
             <tr>
@@ -63,7 +122,7 @@
                     <button>3</button>
                 </td>
                 <td>
-                    <button>+</button>
+                    <button class="orange">+</button>
                 </td>
             </tr>
             <tr>
@@ -77,7 +136,7 @@
                     <button>.</button>
                 </td>
                 <td>
-                    <button>=</button>
+                    <button class="green">=</button>
                 </td>
             </tr>
         </table>
